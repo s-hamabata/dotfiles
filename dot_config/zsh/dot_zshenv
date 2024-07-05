@@ -32,7 +32,9 @@ export GHQ_ROOT="${HOME}/src"
 # PATH設定
 # ----------------------------------------------------------
 # cargoのPATHを通す
+if [ -e ${XDG_DATA_HOME}/cargo/env ]; then
 . ${XDG_DATA_HOME}/cargo/env
+fi
 
 # snap用
 export PATH=${PATH}:/snap/bin

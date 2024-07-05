@@ -1,13 +1,15 @@
+#!/bin/sh
+
 {{ if eq .chezmoi.os "linux" }}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-
-#!/bin/sh
+. ${HOME}/.config/zsh/.zshenv
 
 cargo install eza
 cargo install fd-find
 cargo install bat
 cargo install ripgrep
 cargo install zoxide
+cargo install mise
 
 {{   end }}
 {{ end }}

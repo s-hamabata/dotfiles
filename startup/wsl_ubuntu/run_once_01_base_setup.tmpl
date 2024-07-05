@@ -1,8 +1,7 @@
-{{ if eq .chezmoi.os "linux" }}
-{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-
 #!/bin/sh
 
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # パッケージのリストを更新する
 sudo apt update -y
 
@@ -20,6 +19,5 @@ sudo update-locale LANG=ja_JP.UTF8
 
 # 日本語マニュアルのインストール
 sudo apt -y install manpages-ja manpages-ja-dev
-
 {{   end }}
 {{ end }}

@@ -1,8 +1,7 @@
-{{ if eq .chezmoi.os "linux" }}
-{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-
 #!/bin/sh
 
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # インストール
 curl -sS https://starship.rs/install.sh | sh
 
