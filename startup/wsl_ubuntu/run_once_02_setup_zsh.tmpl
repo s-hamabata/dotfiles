@@ -9,6 +9,6 @@ sudo apt install -y zsh
 chsh -s /bin/zsh
 
 # /etc/zsh/zshenvの追記
-sudo echo 'ZDOTDIR=$HOME/.config/zsh' >> /etc/zsh/zshenv
+sudo echo 'ZDOTDIR=$HOME/.config/zsh' | sudo tee -a /etc/zsh/zshenv
 {{   end }}
 {{ end }}
