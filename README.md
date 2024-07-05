@@ -16,7 +16,7 @@ brew install chezmoi
 ### Ubuntu(WSL)の場合
 
 ```zsh
-snap install chezmoi --classic
+sudo snap install chezmoi --classic
 ```
 
 ### [mise](https://github.com/jdx/mise)を使っている場合
