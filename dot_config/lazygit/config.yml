@@ -1,0 +1,5 @@
+gui:
+  # 日本語化
+  language: 'ja'
+  # NerdFontに対応したアイコンの表示
+  showIcons: true
