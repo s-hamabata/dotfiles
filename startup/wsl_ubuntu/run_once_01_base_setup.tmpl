@@ -1,0 +1,25 @@
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+
+#!/bin/sh
+
+# パッケージのリストを更新する
+sudo apt update -y
+
+# インストール済のパッケージを更新する
+sudo apt upgrade -y
+
+# 必要となる開発用パッケージ系を一括でインストールする
+sudo apt install -y git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev pkg-config autoconf patch rustc libreadline6-dev libgmp-dev libncurses5-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
+
+# 日本語言語パックのインストール
+sudo apt -y install language-pack-ja
+
+# ロケールを日本語に設定
+sudo update-locale LANG=ja_JP.UTF8
+
+# 日本語マニュアルのインストール
+sudo apt -y install manpages-ja manpages-ja-dev
+
+{{   end }}
+{{ end }}

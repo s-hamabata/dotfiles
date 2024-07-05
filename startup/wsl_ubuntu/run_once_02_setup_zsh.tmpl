@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+
+#!/bin/sh
+
+# zshのインストール
+sudo apt-get install zsh
+
+# カレントシェルの変更
+chsh -s /bin/zsh
+
+{{   end }}
+{{ end }}
