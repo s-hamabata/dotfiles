@@ -4,18 +4,23 @@
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 . ${HOME}/.config/zsh/.zshenv
 
-# cargo製ツールのインストール
+# apt
+sudo apt install -y fzf
+
+# rust
 cargo install eza
 cargo install fd-find
 cargo install bat
 cargo install ripgrep
 cargo install zoxide
-cargo install mise
 cargo install git-delta
 
-# mise を使ってghqをインストール
+# mise
 mise install ghq
 mise use --global ghq@latest
+
+mise install node
+mise use --global node@latest
 
 {{   end }}
 {{ end }}

@@ -7,7 +7,7 @@
 eval "$(sheldon source)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(${CARGO_HOME}/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 # ----------------------------------------------------------
 # zshrcに設定する内容を分割するためのスクリプト

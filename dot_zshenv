@@ -1,6 +1,0 @@
-# XDG Base Directory対応
-ZDOTDIR=${HOME}/.config/zsh
-# Cargoのパスを通す
-if [ -e ${HOME}/.local/share/cargo/env ]; then
-  . ${HOME}/.local/share/cargo/env
-fi
