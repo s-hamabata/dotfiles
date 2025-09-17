@@ -4,12 +4,14 @@
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 . ${HOME}/.config/zsh/.zshenv
 
+# cargo製ツールのインストール
 cargo install eza
 cargo install fd-find
 cargo install bat
 cargo install ripgrep
 cargo install zoxide
 cargo install mise
+cargo install git-delta
 
 # mise を使ってghqをインストール
 mise install ghq
